@@ -35,9 +35,9 @@
             $prettyCheckbox.click(function (e) {
                 $(this).toggleClass('checked');
                 if ($nativeCheckbox.attr('checked')) {
-                    $nativeCheckbox.removeAttr('checked');
+                    $nativeCheckbox.removeAttr('checked').trigger('change');
                 } else {
-                    $nativeCheckbox.attr('checked', 'checked');               
+                    $nativeCheckbox.attr('checked', 'checked').trigger('change');               
                     if ($prettyCheckbox.hasClass('error')) {
                         $prettyCheckbox.removeClass('error');
                     }
