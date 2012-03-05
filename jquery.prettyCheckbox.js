@@ -16,10 +16,9 @@
     }
  
     PrettyCheckbox.prototype.init = function () {
-        var $checkboxes = $(this.element).find(':checkbox'),
-            options = this.options;
+        var options = this.options;
         
-        $checkboxes.each(function () {
+        this.each(function () {
             var $nativeCheckbox = $(this),
                 $label = $nativeCheckbox.closest('label'),
                 labelContent = $label.html(),
